@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!-- Basic differential drive mobile base -->
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="diffbot">
+  <xacro:arg name="prefix" default="" />
+
+  <!-- Import robot's main urdf file -->
+  <xacro:include filename="$(find robot_control_pkg)/urdf/diffbot_description.urdf.xacro" />
+
+  <!-- Import diffbot ros2_control description -->
+  <xacro:include filename="$(find robot_control_pkg)/ros2_control/diffbot.ros2_control.xacro" />
+
+  <xacro:diffbot prefix="$(arg prefix)" />
+
+  <xacro:diffbot_ros2_control
+    name="diffbot" prefix="$(arg prefix)" />
+
+</robot>

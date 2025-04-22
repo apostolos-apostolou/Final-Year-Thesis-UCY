@@ -1,0 +1,9 @@
+<library path="robot_control_pkg">
+  <class name="robot_control_pkg/RobotControlHardware"
+         type="robot_control_pkg::RobotControlHardware"
+         base_class_type="hardware_interface::SystemInterface">
+    <description>
+      Modified version of ros2_control diffbot example using a system hardware interface-type. It uses velocity command and position + velocity state interfaces.
+    </description>
+  </class>
+</library>
